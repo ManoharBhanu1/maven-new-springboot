@@ -1,28 +1,76 @@
-<!DOCTYPE HTML>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Avengers Login</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-    <title>Hello From Avinash</title>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('https://wallpaperaccess.com/full/1603906.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Bebas Neue', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
-    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+    .login-box {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00f;
+      color: #fff;
+      width: 300px;
+      text-align: center;
+    }
 
+    .login-box h2 {
+      margin-bottom: 20px;
+      font-size: 2em;
+      color: #f00;
+      letter-spacing: 2px;
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .login-box input[type="submit"] {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background: #f00;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .login-box input[type="submit"]:hover {
+      background: #c00;
+    }
+  </style>
 </head>
-
 <body>
-
-<main role="main" class="container">
-
-    <div class="starter-template">
-        <h1>Welcome to Jenkins CICD Project</h1>
-        <h2> <span th:text="'Hello, ' + ${message}"></span> </h2>
-    </div>    
-
-</main>
-<!-- /.container -->
-
+  <div class="login-box">
+    <h2>Avengers Assemble</h2>
+    <form>
+      <input type="text" placeholder="Username" required /><br />
+      <input type="password" placeholder="Password" required /><br />
+      <input type="submit" value="Login" />
+    </form>
+  </div>
 <script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
 </body>
 </html>
